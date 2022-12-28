@@ -31,6 +31,10 @@ ul {
   .active {
     background-color: #4CAF50;
   }
+  .active2 {
+    background-color: blueviolet;
+    width: 80px;
+  }
 
   table td {
     text-align: center;
@@ -51,7 +55,6 @@ ul {
 
   button a {
     text-decoration: none;
-
     color: red;
     font-weight: bolder;
   }
