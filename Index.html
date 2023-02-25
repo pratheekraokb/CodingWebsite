@@ -1,0 +1,962 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CodingWithPratheek</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            width: 100%;
+            border: 5px solid black;
+        }
+
+        th,
+        td {
+            text-align: center;
+            padding: 8px;
+        }
+
+        table td {
+            text-align: center;
+        }
+
+        table td button {
+            /* padding: 10px; */
+            margin-right: 5px;
+        }
+
+        table button {
+
+            height: 60px;
+            min-width: 100px;
+            background-color: aqua;
+            margin: 5px;
+        }
+        button.articlebtn{
+            background-color: #4CAF50;
+            /* min-width: 160px; */
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        button a {
+            text-decoration: none;
+            color: red;
+            font-weight: bolder;
+        }
+
+        button a:hover {
+            color: black;
+        }
+
+        table.programTable tr:hover {
+            background-color: green;
+            color: whitesmoke;
+            font-weight: bold;
+        }
+
+        div.table {
+            justify-content: center;
+        }
+
+        .dropbtn {
+            background-color: #4CAF50;
+            min-width: 160px;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            width: 100%; 
+            display: grid;
+            /* Define Auto Row size */
+            grid-auto-rows: 100px; 
+            /*Define our columns */
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+            grid-gap: 1em;
+            }
+
+            article {
+            border-radius: 10px;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+
+            }
+
+            article:nth-child(odd) {
+            background-color: #55BBE9;
+        
+            }
+
+            article:nth-child(even) {
+            background-color: #afbe29;
+            }
+            article a{
+                text-decoration: none;
+                color: black;
+                font-style: italic;
+                padding: 5px;
+                font-size: medium;
+                margin-top: 3px;
+            }
+
+            .open-button {
+                background-color: #555;
+                color: white;
+                padding: 16px 20px;
+                border: none;
+                cursor: pointer;
+                opacity: 0.8;
+                position: fixed;
+                bottom: 2%;
+                left: 40%;
+                border-radius: 20px;
+                /* width: 280px; */
+                }
+
+           
+            
+    </style>
+</head>
+
+
+<body>
+    <a name="top">
+    <div class="NavBar">
+        <nav class="navbar navbar-dark bg-dark ">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">CodingWithPratheek </a>
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                    aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Welcome To Our Site</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contact Us</a>
+                            </li>
+                        </ul>
+                        <span class="navbar-text">
+                            <small><i>2019 APJ Abdul Kalam Technological University</i></small>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="container">
+       
+        <div class="TopDiv">
+            <main>
+            
+                <article>Semester 1</article>
+                <article>
+                    Semester 2 <br>
+                    <a href="#s3java" onclick="javaVisible()">Java</a>
+                    <a href="#s3ds" onclick="dsVisible()">Data Structures</a>
+                </article>
+                <article>Semester 3</article>
+                <article>Semester 4</article>
+                <article>Semester 5</article>
+                <article>Semester 6</article>
+                <article>Semester 7</article>
+                <article>Semester 8</article>
+                
+                
+              </main>
+            <!-- <table>
+                <tr>
+                    <td>
+                        <div class="dropdown">
+                            <button class="dropbtn">Dropdown</button>
+                            <div class="dropdown-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn">Dropdown</button>
+                            <div class="dropdown-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn">Dropdown</button>
+                            <div class="dropdown-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn">Dropdown</button>
+                            <div class="dropdown-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn">Dropdown</button>
+                            <div class="dropdown-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn">Dropdown</button>
+                            <div class="dropdown-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn">Dropdown</button>
+                            <div class="dropdown-content">
+                                <a href="#">Link 1</a>
+                                <a href="#">Link 2</a>
+                                <a href="#">Link 3</a>
+                            </div>
+                        </div>
+                       
+                    </td> 
+                </tr>
+            </table> -->
+        
+            
+        </div>
+
+        <div class="javaDiv" id="javaDiv">
+        <a name="s3java">
+            <h2 style="color:red;">&nbsp &nbspS3 Java</h2>
+            
+            <div style="overflow-x:auto;">
+                <a href="#top"><button class="open-button">TOP</button></a>
+                <table class="programTable">
+                    <tr>
+                        <th>Sl Number</th>
+                        <th>Topic</th>
+                        <th>Materials</th>
+                    </tr>
+
+                    <tr style="background-color: blue;color: white;font-weight: bold;">
+                        <td>#</td>
+                        <td>Complete Codes/ Record <br>In One Pdf</td>
+                        <td>
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1_AoYP3qONSbfpZYHhmZZcWl1RxZUjfCR"
+                                    download="CompleteJavaCode.pdf">Complete <br>Code</a> </button>
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1SgbXzHx9RMuGvcUZVbGY4BzwagS6jIMU"
+                                    download="CompleteJavaCode.pdf">Complete <br>Record</a> </button>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Reverse An Array</td>
+                        <td>
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1W80uTSLwjTI-KpveYSXdDQAEegUnORmn"
+                                    download="ReverseArray.pdf">Code</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td> Sum Of Odd Elements of Matrix &nbsp &nbsp</td>
+                        <td>
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1mVu1yWgdEvAP9u3EUcCFKSM4Qzbh3RsR"
+                                    download="MatOddSum.pdf">Code</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Complex Numbers Addition</td>
+                        <td>
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1kARsksg03S1s9ijRFkoTyM2gp0tBOOMA"
+                                    download="ComplexAdd.pdf">Code</a> </button>
+
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Matrix Addition</td>
+                        <td>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1-rEP4H5yaV8H7By6K1HJLGhOqX8-pZCe"
+                                    download="MatrixAdd.pdf">Code</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>Demonstration Of
+                            <br>Method Overloading
+                        </td>
+                        <td>
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1lQxrNHCAG58rXO9qi6GSJUWMTxOLh-oY"
+                                    download="MethodOverload.pdf">Code</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>6</td>
+                        <td>Demonstration Of Dynamic
+                            <br>
+                            Method Dispatch
+                        </td>
+                        <td>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1zlKAyR_NqdzBmzm3ZrlvKC1lhR_Wk4Pn"
+                                    download="DynamicMethodDispatch.pdf">Code</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>7</td>
+                        <td>Application Of Super Keyword</td>
+                        <td>
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1BKo4XaKUUCS9dB4vYz-01FbX6HWxDJCc"
+                                    download="SuperKeyword.pdf">Code</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>8</td>
+                        <td>Demonstration of Package</td>
+                        <td>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1Nh8Mrxibg8hxXkAA5aKymk3bzf38djGk"
+                                    download="Package.pdf">Code</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>9</td>
+                        <td>Demonstration of Interface</td>
+                        <td>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1md0S2H6e_-6xvquwzaVcBpDrqxYC9uVt"
+                                    download="Interface.pdf">Code</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>10</td>
+                        <td>Demonstration of <br>Exception Handling</td>
+                        <td>
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1pba0aWXlgtJeEYjOFQqdxCjrsnsowtgh"
+                                    download="ExceptionHandling.pdf">Code</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>11</td>
+                        <td>Demonstration of <br>User Defined Exceptions</td>
+                        <td>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1Qq-F58pm6OxfWfEpoatJWZHbBuNWQT6o"
+                                    download="SparseMatrixException.pdf">Code</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>12</td>
+                        <td>Multi Threading</td>
+                        <td>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1A1Lf_-DVQz4ieum2HmNQAqLmeVNhDPex"
+                                    download="MultiThreading.pdf">Code</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>13</td>
+                        <td>Demonstrate The Use <br>Of Synchronized Keyword</td>
+                        <td>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1Vec6zRGtmIviVrJpY2y7YgpOXlt50tTT"
+                                    download="SynchronizedKeyword.pdf">Code</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>14</td>
+                        <td>Copy Contents Of One <br>File To Other</td>
+                        <td>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1FLbCpCJqa76kBrYxVwIZJlKI2_U2nR6V"
+                                    download="FileCopy.pdf">Code</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>15</td>
+                        <td>Reverse Contents Of One<br> File & Copy To Other</td>
+                        <td>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1UEfL-dfdqTEwgUP-usIW4FCRhenoLHFk"
+                                    download="FileReverse.pdf">Code</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>16</td>
+                        <td>Simple Swing Program</td>
+                        <td>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1nWHChNI1zsT8Zq-zCDNruyRmBdXPWp9b"
+                                    download="SimpleSwing.pdf">Code</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>17</td>
+                        <td>Swing Calculator</td>
+                        <td>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=19_xbaTR4eP42rTy7MJQewCKgwN_VzaP8"
+                                    download="SwingCalculator.pdf">Code</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>18</td>
+                        <td>Insert Data Into Database</td>
+                        <td>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1fDcLV832Y5-za-fvWrOHvxS6FIwt651m"
+                                    download="InsertDtaDb.pdf">Code</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>19</td>
+                        <td>Insert Data Into Database<br>Using Swing GUI</td>
+                        <td>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=16RaRoidRmzr4zaVGD3GVGzye9AgsNEk-"
+                                    download="InsertDtaDbSwing.pdf">Code</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>20</td>
+                        <td>Retrieve Data From Database</td>
+                        <td>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1eBU8vpeR4U4vqTKoa8PCqKwZ5pZMjn1j"
+                                    download="RetrieveDtaDb.pdf">Code</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>21</td>
+                        <td>Retrieve Data From Database <br> Using Swing<br></td>
+                        <td>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1jUR6zGPOdIgDZU84gcTN2MEib07ZM7x8"
+                                    download="RetrieveDtaDbSwing.pdf">Code</a> </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </a>
+
+        </div>
+
+        <div class="dsDiv">
+        <a name="s3ds">
+            <br><br>
+            <h2 style="color:red;">&nbsp &nbspS3 Data Structures</h2>
+            <div style="overflow-x:auto;">
+                <table class="programTable">
+                    <tr>
+                        <th>Sl Number</th>
+                        <th>Topic</th>
+                        <th>Materials</th>
+                    </tr>
+
+                    <tr style="background-color: blue;color: white;font-weight: bold;">
+                        <td>#</td>
+                        <td>Complete Codes/ Record <br>In One Pdf</td>
+                        <td>
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1V4DAxeQua1nMrmPlGlCct2dPYkRRa5m-"
+                                    download="CompleteDSCode.pdf">Complete <br>Code</a> </button>
+
+                            <button disabled> Complete <br>Record </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>1</td>
+                        <td>Linear Search</td>
+                        <td>
+
+                            <button class="buttonMat button1"> <a
+                                    href="https://drive.google.com/uc?export=download&id=1pRGyDqKHZ-b44cDsSb8C1wBdBd4o5Pkw"
+                                    download="LinSearchCode.pdf">Code</a> </button>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1CDiStSGQlK8_0uV2kea41LU8V5XFfxq7"
+                                    download="Linear_Search_Algo.pdf">Algorithm</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>2</td>
+                        <td>Binary Search</td>
+                        <td>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1DzV03UES9qLAfr2msU_t1mfyYV2UERKG"
+                                    download="BinSearchCode.pdf">Code</a> </button>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1C4Cz2pZwsRJeH54mtJ-LxynYgeQ7fl4H"
+                                    download="Binary_Search_Algo.pdf">Algorithm</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>3</td>
+                        <td>Polynomial Addition Using Arrays</td>
+                        <td>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1MNrwjrphpCrHnA3dler-HyleLGERXQ0W"
+                                    download="PolyArrCode.pdf">Code</a> </button>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1C-XNJNMybDAsXOWMHQcKLbufZacqyeGE"
+                                    download="PolyAddArr_Algo.pdf">Algorithm</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>4</td>
+                        <td>Sparse Matrix Implementation</td>
+                        <td>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1m59dBF297IoXgD4DvytGcbzZENTDhczP"
+                                    download="SparseMatCode.pdf">Code</a> </button>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1By4dwbtSz-FsveW5RSB93I2yI8lAxF4Z"
+                                    download="Sparse_Matrix_Algo.pdf">Algorithm</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>5</td>
+                        <td>Stack</td>
+                        <td>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1D9qS3ZiiyYUSzo2laK1xywx-uo5B1Nnz"
+                                    download="StackCode.pdf">Code</a> </button>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1BktS0Zay2bLJfmg1usYpTsmNlzwvhpMm"
+                                    download="Stack_Algo.pdf">Algorithm</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>6</td>
+                        <td>Queue</td>
+                        <td>
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1cvkYKmPERfrKRVR04XeFM-IJnGnQC2q0"
+                                    download="QueueCode.pdf">Code</a> </button>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1Bh3nz4knQyNIjxFFD6K8IdL8CFBBPHmq"
+                                    download="Queue_Algo.pdf">Algorithm</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>7</td>
+                        <td>Priority Queue</td>
+                        <td>
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1XHkffY9LLzQQ7F2T7DOv88TXjMK0bxwq"
+                                    download="PriorityQueueCode.pdf">Code</a> </button>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1BW0-zWYBm-YNyjbscazW05wx28_B_0n8"
+                                    download="Priority_Queue_Algo.pdf">Algorithm</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>8</td>
+                        <td>Double Ended Queue</td>
+                        <td>
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1fvnhDgpFZxerRKw5VXGQwwSUiESehpLi"
+                                    download="DoubleEndedQueueCode.pdf">Code</a> </button>
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1CJyCXR_NMOzW5c-hGLwrQuL91g6Zo-5w"
+                                    download="DoublEndedQueue_Algo.pdf">Algorithm</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>9</td>
+                        <td>Circular Queue</td>
+                        <td>
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1DLz7KtFOXOyEysPtRTfHQ_thLzjLqL5h"
+                                    download="CircuQueueCode.pdf">Code</a> </button>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1D6Sfq-1lJ7W277xSMvOAya1ZhGeN3_Dp"
+                                    download="Circular_Queue_Algo.pdf">Algorithm</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>10</td>
+                        <td>Evaluation Of Postfix Expression<br>
+                        </td>
+                        <td>
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1xA92OcnzElEcelZdaxUaWEeKh6AgkPI9"
+                                    download="PostfixEvalCode.pdf">Code</a> </button>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1CJ4P4xY_4_C06nwvZ5uci8r9hw2ApmWY"
+                                    download="PostfixExpEval_Algo.pdf">Algorithm</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>11</td>
+                        <td>Implementation of Linked List</td>
+                        <td>
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1nLMNlzwLDA2v5dlUj5MJKHyMzcFrvgff"
+                                    download="LinkedLstCode.pdf">Code</a> </button>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1CS7u1-I99iYaUul3KvZwnM23zKT5jj5s"
+                                    download="LinkedLstImplementation_Algo.pdf">Algorithm</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>12</td>
+                        <td>Poly Add & Multip Linked List</td>
+                        <td>
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1JdRYgb2A8FSRzc7s-gn63cibMSBkNK3E"
+                                    download="PolyLinkedLstCode.pdf">Code</a> </button>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1CZSJeJrWIIKs-C5lRlqw5aEZw0QbGMT6"
+                                    download="PolyAddMulti_Algo.pdf">Algorithm</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>13</td>
+                        <td>Binary Tree Using Array</td>
+                        <td>
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1DVlTHAF_wKH0kFypiuV0gH1M-v8EET77"
+                                    download="BinTreeArrCode.pdf">Code</a> </button>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1C_8ZWSmEXJA60jkgJNL6f5xeNx_oD20p"
+                                    download="BinTreeArr_Algo.pdf">Algorithm</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>14</td>
+                        <td>Binary Tree Using Linked List</td>
+                        <td>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1DIWnSaEVNdN2l2fOe7B8W_QRZ9homNeC"
+                                    download="BinTreeLinkedLstCode.pdf">Code</a> </button>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1Cd-3q7zoi8GtgSDVQminGEYM4WClwHib"
+                                    download="BinTreeLinkedLst_Algo.pdf">Algorithm</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>15</td>
+                        <td>Bubble Sort</td>
+                        <td>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1h08MmggEwxmbN8_XVCX9ZjjiLaXiomra"
+                                    download="BubbleSortCode.pdf">Code</a> </button>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1CybqS3e3aixtk6EyIy34c998UFbjmiDL"
+                                    download="BubbleSort_Algo.pdf">Algorithm</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>16</td>
+                        <td>Insertion Sort</td>
+                        <td>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1utki2ugZBFmwlaNr7o3KrT_XqFWkOqYp"
+                                    download="InsertionSortCode.pdf">Code</a> </button>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1CxVpQDP0wdi1pVaskZnQipqpAfOGkc-o"
+                                    download="InsertionSort_Algo.pdf">Algorithm</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>17</td>
+                        <td>Selection Sort</td>
+                        <td>
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1ykUEui1XLIWgOiAkKkHchBKlp0oPGQLO"
+                                    download="SelectionSortCode.pdf">Code </a></button>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1CrIafoKRYaaw03v7r7PiIH0EFN4FzsnP"
+                                    download="SelectionSort_Algo.pdf">Algorithm</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>18</td>
+                        <td>Quick Sort</td>
+                        <td>
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1JzmPKOpYub1Vk5qelZaFfXJ7fZHvcWc-"
+                                    download="QuickSortCode.pdf">Code </a></button>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1Cp9qUVQlQJnlJHXJC9OWBZ8FIxwtQN8o"
+                                    download="QuickSort_Algo.pdf">Algorithm</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>19</td>
+                        <td>Merge Sort</td>
+                        <td>
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=13GysPF1tccl3Stqy5ClaF0b52y_ySKMh"
+                                    download="MergeSortCode.pdf">Code</a> </button>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1CgiwI_2sjLkMTA_FHj1B3A5PlgDJDXkw"
+                                    download="MergeSort_Algo.pdf">Algorithm</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>20</td>
+                        <td>Heap Sort</td>
+                        <td>
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1eC9NtIchIEEHXnzrh0oPv1Kd16v-7Z6w"
+                                    download="HeapSortCode.pdf">Code</a> </button>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1CfPpHP1AT7vn2_j1-shxCzDzxnAmZU6x"
+                                    download="HeapSort_Algo.pdf">Algorithm</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>21</td>
+                        <td>BFS DFS For Graphs<br> Using Adjacency Matrix</td>
+                        <td>
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1FXOOLFTWZzk8Xdx0HUxw00eUOrE1UZrR"
+                                    download="GraphAdjaMatCode.pdf">Code</a> </button>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1FdtZ6PratLSBAXM8a-3yXjEZbVUfz4Fk"
+                                    download="BFS_DFS_Adjac_Algo.pdf">Algorithm</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>22</td>
+                        <td>BFS DFS For Graphs<br> Using Linked List</td>
+                        <td>
+                            <button disabled> Not Available </button>
+
+                            <button disabled> Not Available </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>23</td>
+                        <td>Implement Hash Table<br>Using Chaining Method</td>
+                        <td>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1G1W0TxSs9LoFDzkl-meT5N7UT_Z33RxR"
+                                    download="HashChainingCode.pdf">Code</a> </button>
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1GsDuZ_1QfQd3cTWeJXyfCmFQ5kaPkDXi"
+                                    download="Chaining_Algo.pdf">Algorithm</a> </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>24</td>
+                        <td>Implement Hash Table<br>Using Linear Probing</td>
+                        <td>
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1G6fAHvF3v04wyWXCj8ooNxgWFqqzEUyP"
+                                    download="HashLinearProbeCode.pdf">Code</a> </button>
+
+
+                            <button> <a
+                                    href="https://drive.google.com/uc?export=download&id=1Hn3GRzMNA-yG4Xsi-Vp_P_sv9NP4JLs6"
+                                    download="LinearProbe_Algo.pdf">Algorithm</a> </button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </a>
+        </div>
+
+    </div>
+    </a>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script>
+       
+    </script>
+</body>
+
+</html>
